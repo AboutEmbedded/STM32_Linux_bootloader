@@ -1,0 +1,13 @@
+{
+    "cmake.sourceDirectory": "/home/adminl/NSYS/Work_zone_firmwares/Bootloader/raspberry_uart",
+    "files.associations": {
+        "errno.h": "c",
+        "uart_rpi.h": "c",
+        "parser.h": "c",
+        "functional": "c",
+        "unistd.h": "c",
+        "stdint.h": "c",
+        "fcntl.h": "c",
+        "stdio.h": "c"
+    }
+}

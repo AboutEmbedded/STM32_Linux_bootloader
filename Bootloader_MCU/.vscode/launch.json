@@ -1,0 +1,36 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "openocd",
+			"type": "cortex-debug",
+			"request": "launch",
+			"cwd": "${workspaceRoot}",
+			"servertype": "openocd",
+			"runToEntryPoint": "main",
+			"preLaunchTask": "Build",
+			"executable": "./build/Bootloader.elf",
+			"svdFile": "STM32F429.svd",
+			"configFiles": [
+				"interface/stlink.cfg",
+				"target/stm32f4x.cfg"
+			],
+			"swoConfig": {
+                "enabled": true,
+                "cpuFrequency": 180000000,
+                "swoFrequency": 2000000,
+                "source": "file",
+                "decoders": [
+                    { 
+						"label": "ITM port 0 output", 
+						"type": "console", 
+						"port": 0,
+						"showOnStartup": true,
+						"encoding": "ascii"
+					 }
+                ]
+
+            }
+		}
+	]
+}
